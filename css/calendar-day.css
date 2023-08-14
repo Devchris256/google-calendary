@@ -1,0 +1,86 @@
+.calendarDay {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  background: var(--white);
+  margin: 0;
+  border-block-end: 1px solid currentColor;
+  position: sticky;
+  inset-block-start: 0;
+}
+
+.calendarDay::before {
+  content: '';
+  inline-size: 1px;
+  block-size: 2rem;
+  background: currentColor;
+  display: block;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+}
+
+.calendarDay a {
+  text-decoration: none;
+  color: currentColor;
+  outline: none;
+}
+
+.calendarDay span:nth-of-type(1) {
+  font: var(--body1-medium);
+}
+
+.calendarDay span:nth-of-type(2) {
+  font: var(--subtitle-subtitle1);
+  display: inline-block;
+  inline-size: 2.75rem;
+  line-height: 2.75rem;
+  border-radius: 50%;
+}
+
+.calendarDay.is-select span:nth-of-type(1) {
+  color: var(--blue10);
+}
+
+.calendarDay.is-select span:nth-of-type(2) {
+  background: var(--blue10);
+  color: var(--white);
+}
+
+.calendarDay.is-select.is-start {
+  align-items: start;
+  padding-inline-start: .5rem;
+}
+/* ---------states------ */
+
+
+.calendarDay.is-select a:hover span:nth-of-type(2),
+.calendarDay.is-select a:focus span:nth-of-type(2) {
+  background: var(--blue30);
+}
+
+.calendarDay a:hover span:nth-of-type(2),
+.calendarDay a:focus span:nth-of-type(2) {
+  background: var(--gray10);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .calendarDay {
+    background: var(--gray50);
+  }
+
+  .calendarDay a:hover span:nth-of-type(2),
+  .calendarDay a:focus span:nth-of-type(2) {
+    background: var(--gray10);
+    color: var(--gray50);
+  }
+
+  .calendarDay.is-select a:hover span:nth-of-type(2),
+  .calendarDay.is-select a:focus span:nth-of-type(2) {
+    background: var(--blue30);
+    color: var(--white);
+  }
+}

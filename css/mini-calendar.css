@@ -1,0 +1,79 @@
+.miniCalendar {
+  --cellSize: 1.75rem;
+  max-inline-size: var(--maxInlineSizeChild);
+}
+
+.miniCalendar-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: .25rem;
+  margin-block-end: .5rem;
+}
+
+.miniCalendar-data {
+  font: var(--body1-medium);
+  color: var(--gray30);
+}
+
+.miniCalendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, var(--cellSize));
+  grid-template-rows: var(--cellSize);
+  align-items: center;
+}
+
+.miniCalendar-month {
+  display: grid;
+  grid-template-columns: repeat(7, var(--cellSize));
+  grid-template-rows: repeat(6, var(--cellSize));
+  align-items: center;
+}
+
+.miniCalendar-weekDay,
+.miniCalendar-monthDay {
+  text-align: center;
+  color: var(--gray30);
+  font: var(--body3-regular);
+  line-height: 1.75rem;
+  border-radius: 50%;
+}
+
+.miniCalendar-monthDay.is-select{
+  background: var(--blue10);
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.miniCalendar-monthDay.is-select a{
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+  inline-size: 100%;
+  border-radius: 50%;
+  outline: none;
+}
+
+.miniCalendar-monthDay.is-inactive {
+  color: var(--gray20);
+}
+
+/* -------states----- */
+
+.miniCalendar-monthDay.is-select a:hover,
+.miniCalendar-monthDay.is-select a:focus {
+  background: var(--blue30);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .miniCalendar-data {
+    color: var(--gray10);
+  }
+
+  .miniCalendar-weekDay,
+  .miniCalendar-monthDay {
+    color: var(--gray10);
+  }
+}

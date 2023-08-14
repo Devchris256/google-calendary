@@ -1,0 +1,38 @@
+.modal {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-inline: 3rem;
+  padding-block: 1.5rem;
+  border: none;
+  border-radius: .25rem;
+  background: var(--white);
+  box-shadow: 0.08734026551246643px 2.5244154930114746px 7.496296405792236px 0px rgba(0, 0, 0, 0.07), 0.4128812551498413px 11.933600425720215px 29.30370330810547px 0px rgba(0, 0, 0, 0.04), 1.0719032287597656px 30.981462478637695px 92px 0px rgba(0, 0, 0, 0.03);
+
+  position: absolute;
+  inset-inline-start: 200px;
+  inset-block-start: 200px;
+  max-inline-size: 28rem;
+  inline-size: 100%;
+  margin: initial;
+}
+
+.modal[open] {
+  display: flex;
+}
+
+.modal::backdrop {
+  background: rgb(0, 0, 0, .3);
+}
+
+.modal-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .modal {
+    background: var(--gray30);
+    box-shadow: 0.08734026551246643px 2.5244154930114746px 7.496296405792236px 0px rgba(0, 0, 0, 0.07), 0.4128812551498413px 11.933600425720215px 29.30370330810547px 0px rgba(0, 0, 0, 0.04), 1.0719032287597656px 30.981462478637695px 92px 0px rgba(169, 167, 167, 0.152);
+  }
+}

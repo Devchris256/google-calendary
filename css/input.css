@@ -1,0 +1,78 @@
+.input {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 1rem;
+}
+
+.input i {
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.input-body {
+  flex: 1;
+  display: flex;
+  gap: .5rem;
+}
+
+.input input,
+.input textarea{
+  flex: 1;
+  color: var(--gray30);
+  border: none;
+  font: var(--body1-regular);
+  outline: none;
+}
+
+.input textarea {
+  resize: none;
+}
+
+.input-body.is-oustanding input {
+  font: var(--subtitle-subtitle1);
+}
+
+.input-body.is-button input {
+  padding-inline: 1rem;
+  padding-block: .625rem;
+  background: var(--blue10);
+  color: var(--white);
+  border-radius: .25rem;
+}
+
+.input input::placeholder {
+  color: var(--gray20);
+}
+
+/* -----states------ */
+
+.input input:focus,
+.input textarea:focus,
+.input input:hover,
+.input textarea:hover {
+  box-shadow: 0 2px 0 var(--blue10);
+}
+
+.input-body.is-button input:hover,
+.input-body.is-button input:focus {
+  background: var(--blue30);
+  box-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input i {
+    color: var(--gray10);
+  }
+
+  .input input,
+  .input textarea{
+    background: var(--gray20);
+    color: var(--gray10);
+  }
+
+  .input input::placeholder,
+  .input textarea::placeholder {
+    color: var(--gray50);
+  }
+
+}

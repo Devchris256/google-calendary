@@ -1,0 +1,16 @@
+.calendarStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.calendarStatus time {
+  color: var(--gray30);
+  font: var(--subtitle-subtitle1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .calendarStatus time {
+    color: var(--gray10);
+  }
+}

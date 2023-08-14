@@ -1,0 +1,32 @@
+.taskCell {
+  border-block-end: 1px solid currentColor;
+  border-inline-start: 1px solid currentColor;
+  padding-inline: .25rem;
+  outline: none;
+}
+
+.taskCell.is-active::before {
+  content: '(Sin titulo)';
+  display: block;
+  background: rgb(148, 212, 233);
+  border-radius: 0.25rem;
+  color: var(--white);
+  padding: .25rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* -----states----- */
+
+.taskCell:focus > * {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  .taskCell:focus > * {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+
+  .taskCell.is-active::before {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}

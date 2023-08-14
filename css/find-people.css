@@ -1,0 +1,34 @@
+.findPeople {
+  max-inline-size: var(--maxInlineSizeChild);
+}
+
+.findPeople input {
+  outline: none;
+  inline-size: 100%;
+  padding-block: .625rem;
+  padding-inline-start: 2.5rem;
+  font: var(--body1-regular);
+  color: var(--gray20);
+  border-radius: .25rem;
+  background-color: var(--gray10);
+  border: none;
+  background-image: url(../icon/users.svg);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: left 1rem center;
+}
+
+.findPeople input:focus {
+  box-shadow: 0 2px 0 var(--blue10);
+}
+
+@media (prefers-color-scheme: dark) {
+  .findPeople input {
+    color: var(--gray10);
+    background-color: var(--gray30);
+  }
+
+  .findPeople input::placeholder {
+    color: var(--gray10);
+  }
+}

@@ -1,0 +1,70 @@
+.eventsCalendar {
+  color: var(--gray30);
+  inline-size: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.eventsCalendar summary{
+  font: var(--body1-medium);
+  display: block;
+  padding-block: .25rem;
+  background-image: url(../icon/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem 1.5rem;
+  background-position: right center;
+  margin: auto;
+  max-inline-size: var(--maxInlineSizeChild);
+  outline: none;
+}
+
+.eventsCalendar[open] summary {
+  background-image: url(../icon/chevron-up.svg);
+}
+
+.event {
+  padding-block: .12rem;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.event label {
+  font: var(--body1-regular);
+  color: var(--gray30);
+  user-select: none;
+}
+
+.event input {
+  appearance: none;
+  inline-size: 1.5rem;
+  aspect-ratio: 1;
+  background-image: url(../icon/check-white.svg);
+  margin: 0;
+  background-size: cover;
+}
+
+.event input:checked {
+  background-image: url(../icon/check-square-white.svg);
+}
+
+.eventsCalendar:hover,
+.eventsCalendar:focus {
+  background: var(--gray10);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .eventsCalendar {
+    color: var(--gray10);
+  }
+
+  .event label {
+    color: var(--gray10);
+  }
+
+  .eventsCalendar:hover,
+  .eventsCalendar:focus {
+    background: var(--gray30);
+  }
+}

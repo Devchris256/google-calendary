@@ -1,0 +1,121 @@
+.button {
+  border: transparent;
+  text-decoration: none;
+  color: currentColor;
+  background: transparent;
+  font: var(--button-button);
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  display: inline-block;
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.button i {
+  color: var(--gray50);
+  font-size: 1.5rem;
+}
+
+.button i,
+.button span {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.button.is-primary {
+  background: var(--blue10);
+  color: white;
+}
+
+.button.is-secundary {
+  border: 1px solid var(--gray20);
+  color: var(--gray20);
+  padding-inline: .75rem;
+  padding-block: .5rem;
+}
+
+.button.is-compact {
+  padding: .5rem;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.button.is-redoned {
+  background: var(--white);
+  color: var(--blue10);
+  border-radius: 3.125rem;
+}
+
+.button.is-redoned i {
+  font-size: 2rem;
+}
+
+.button.is-showed {
+  box-shadow: 0.08734026551246643px 2.5244154930114746px 7.496296405792236px 0px rgba(0, 0, 0, 0.07), 0.4128812551498413px 11.933600425720215px 29.30370330810547px 0px rgba(0, 0, 0, 0.04), 1.0719032287597656px 30.981462478637695px 92px 0px rgba(0, 0, 0, 0.03);
+}
+
+.button.is-showed.is-redoned {
+  transition: transform .2s;
+}
+
+/* ----------states--------- */
+.button:active {
+  transform: scale(.9);
+}
+
+.button:hover,
+.button:focus {
+  background: var(--gray10);
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+  background: var(--blue30);
+}
+
+.button.is-showed.is-redoned:hover,
+.button.is-showed.is-redoned:focus {
+  background: var(--white);
+  transform: scale(1.1);
+  box-shadow: 0px 3px 10px 5px rgba(21, 21, 21, 0.149);
+}
+
+@media (prefers-color-scheme: dark) {
+  .button i {
+    color: var(--white);
+  }
+
+  .button.is-secundary {
+    border: 1px solid var(--gray10);
+    color: var(--gray10);
+  }
+
+  .button.is-compact {
+    padding: .5rem;
+    background: var(--gray50);
+    border-radius: 50%;
+  }
+
+  .button.is-redoned {
+    background: var(--gray50);
+    color: var(--blue10);
+  }
+
+  .button.is-showed {
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.433);
+  }
+
+  .button:hover,
+  .button:focus {
+    background: var(--gray30);
+  }
+
+  .button.is-showed.is-redoned:hover,
+  .button.is-showed.is-redoned:focus {
+    background: var(--gray20);
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: 0px 3px 10px 5px rgba(184, 181, 181, 0.149);
+  }
+}

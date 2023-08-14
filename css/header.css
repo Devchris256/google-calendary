@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+  border-block-end: 1px solid var(--gray30);
+}
+
+.header-primary {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.header-secundary {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header-tool {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.header  img {
+  vertical-align: middle;
+}
+
+.header-secundary img {
+  inline-size: 2rem;
+  aspect-ratio: 1;
+}
+
+.header-secundary a {
+  border-radius: 50%;
+}

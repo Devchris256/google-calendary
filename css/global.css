@@ -1,0 +1,36 @@
+:root {
+  --fontFamily: 'Roboto', sans-serif;
+  --white: #fffffe;
+  --gray10: #f1f3f4;
+  --gray20: #70757a;
+  --gray30: #3c4043;
+  --gray50: #222222;
+  --blue10: #1a73e8;
+  --blue20: #039be5;
+  --blue30: #1967d2;
+  --red10: #e8453c;
+  --green10: #33b679;
+  --body1-regular: 400 0.875rem/1.25rem var(--fontFamily);
+  --body1-medium: 500 0.875rem/1.25rem var(--fontFamily);
+  --body3-medium: 500 0.625rem/0.5rem var(--fontFamily);
+  --body3-regular: 400 0.625rem/0.5rem var(--fontFamily);
+  --body2-regular: 400 0.75rem/1rem var(--fontFamily);
+  --body2-medium: 500 0.75rem/1rem var(--fontFamily);
+  --button-button: 500 0.875rem/1rem var(--fontFamily);
+  --subtitle-subtitle1: 400 1.375rem/1.75rem var(--fontFamily);
+  --maxInlineSizeChild: 12.25rem;
+}
+
+body {
+  font: var(--body1-regular);
+  margin: 0;
+  background: var(--white);
+  color: var(--gray20);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--gray50);
+    color: var(--white);
+  }
+}
